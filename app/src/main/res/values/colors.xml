@@ -3,11 +3,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <!-- Main Color Pallete   -->
+    <!-- Main Color Palette   -->
     <color name="color_1">#24271D</color>
     <color name="color_2">#59817B</color>
     <color name="color_3">#C9D7C5</color>
     <color name="color_4">#E9EBE5</color>
     <color name="color_5">#676140</color>
-
+    <color name="color_6">#678C80</color>
+    
+    <!--  Daily Goals Color Palette   -->
+    <color name="daily_goals_1">#E2D6C8</color>
+    <color name="daily_goals_2">#5A4C43</color>"
 </resources>

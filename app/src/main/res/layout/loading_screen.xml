@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/color_3">
+    android:background="@color/color_4">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/main_guideline_bottom"
@@ -66,10 +66,10 @@
             android:fontFamily="@font/nunito"
             android:text="@string/trivia"
             android:textSize="12sp"
-            android:textAlignment="center"
+            android:gravity="center"
+            android:justificationMode="none"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@id/guideline_bottom"
             app:layout_constraintTop_toTopOf="@id/trivia_header"/>
@@ -83,12 +83,12 @@
         android:layout_width="250sp"
         android:layout_height="8dp"
         app:cornerRadius="4dp"
-        app:indicatorColor="@color/color_3"
+        app:indicatorColor="@color/color_2"
         android:layout_marginEnd="25sp"
         app:indicatorDirectionLinear="leftToRight"
         app:layout_constraintBottom_toTopOf="@id/main_guideline_bottom"
         app:layout_constraintEnd_toEndOf="parent"
-        app:trackColor="@color/color_2"
+        app:trackColor="@color/color_3"
         app:trackThickness="8dp"/>
 
 

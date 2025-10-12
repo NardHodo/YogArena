@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_4"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/main_menu_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_menu_initial"
+            android:scaleType="centerCrop"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_top_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_bottom_guideline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_start_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_end_guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95"/>
+
+            <RelativeLayout
+                android:id="@+id/profile_view"
+                android:layout_width="200sp"
+                android:layout_height="50sp"
+                android:background="@drawable/profile_view"
+                app:layout_constraintStart_toStartOf="@id/margin_start_guideline"
+                app:layout_constraintTop_toBottomOf="@id/margin_top_guideline"
+                tools:layout_editor_absoluteX="30sp">
+
+                <ImageButton
+                    android:layout_width="50sp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profile_button"
+                    android:backgroundTint="@color/color_3"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/profile_icon"
+                    android:layout_centerVertical="true"/>
+
+                <LinearLayout
+                    android:id="@+id/player_info_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/profile_button"
+                    android:layout_centerVertical="true"
+                    android:orientation="vertical"
+                    android:layout_marginStart="6dp">
+
+
+                    <TextView
+                        android:id="@+id/player_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/player_name"
+                        android:fontFamily="@font/merriweather_black"
+                        android:textSize="11sp"
+                        android:textColor="@color/color_1"/>
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:layout_width="120sp"
+                        android:layout_height="11sp"
+                        android:layout_marginTop="3dp"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/daily_goals_screen"
+                android:layout_width="200sp"
+                android:layout_height="250sp"
+                android:padding="10sp"
+                android:background="@drawable/daily_goals"
+                app:layout_constraintBottom_toTopOf="@id/margin_bottom_guideline"
+                app:layout_constraintStart_toStartOf="@id/margin_start_guideline"
+                app:layout_constraintEnd_toEndOf="@id/profile_view">
+
+                <TextView
+                    android:id="@+id/goal_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/merriweather_black"
+                    android:text="@string/daily_goals_header" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <ImageButton
+                        android:id="@+id/add_goals_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@android:color/transparent"
+                        android:src="@drawable/plus_daily_goals"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/daily_goals_creator"
+                        android:textAlignment="center"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/nunito"
+                        app:layout_constraintTop_toBottomOf="@id/add_goals_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </RelativeLayout>
+
+            <ImageButton
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:src="@drawable/game_settings"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"
+                android:padding="10dp"
+                android:background="@drawable/dark_buttons"
+                app:layout_constraintTop_toBottomOf="@id/margin_top_guideline"
+                app:layout_constraintEnd_toEndOf="@id/margin_end_guideline"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="150sp"
+                android:layout_height="60sp"
+                android:fontFamily="@font/merriweather_black"
+                app:layout_constraintBottom_toTopOf="@id/margin_bottom_guideline"
+                app:layout_constraintEnd_toEndOf="@id/margin_end_guideline"
+                app:backgroundTint="@color/color_4"
+                android:text="@string/play_button"
+                android:textColor="@color/color_1"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

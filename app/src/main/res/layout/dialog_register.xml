@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_green_bg"
+        android:orientation="vertical"
+      >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:text="Your Yoga Journey Awaits"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="17sp"
+            android:fontFamily="@font/merriweather_bold"
+            />
+
+        <EditText
+            android:id="@+id/CreatedUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:backgroundTint="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:text=""
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/Create_Username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Create Username"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:fontFamily="@font/merriweather"/>
+
+        <EditText
+            android:id="@+id/InputedPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:id="@+id/Create_Strong_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Create a Strong Password"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+            android:textSize="11sp"
+            android:fontFamily="@font/merriweather"/>
+
+        <EditText
+            android:id="@+id/Inputted_Confirm_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            />
+        <TextView
+            android:id="@+id/Confirm_Password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="  Confirm Password"
+            android:textColor="@color/white"
+            android:layout_marginStart="12dp"
+
+            android:textSize="11sp"
+            android:fontFamily="@font/merriweather"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="end"
+            android:layout_marginTop="-25dp"
+            >
+
+            <Button
+                android:id="@+id/Cancel_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="60dp"
+                android:backgroundTint="@color/white"
+                android:text="Cancel"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/merriweather"/>
+
+            <Button
+                android:id="@+id/Next_Button"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp"
+                android:text="Next"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:fontFamily="@font/merriweather"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
