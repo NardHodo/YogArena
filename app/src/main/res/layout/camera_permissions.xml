@@ -14,6 +14,7 @@
         app:layout_constraintTop_toBottomOf="@id/margin_top_guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/permission_desc"
         />
 
     <androidx.constraintlayout.widget.Guideline
@@ -21,49 +22,56 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.05"/>
+        app:layout_constraintGuide_percent="0.15"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/margin_bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95"/>
+        app:layout_constraintGuide_percent="0.85"/>
 
 
     <TextView
         android:id="@+id/permission_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:paddingHorizontal="250sp"
         android:fontFamily="@font/nunito_medium"
+        android:textAlignment="center"
         android:text="@string/camera_permissions_desc"
         app:layout_constraintTop_toBottomOf="@id/camera_permissions_icon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/margin_bottom_guideline"/>
+        app:layout_constraintBottom_toTopOf="@id/button_layout"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/exit_button"
-        android:layout_width="120sp"
-        android:layout_height="50sp"
-        android:text="@string/not_now"
-        app:backgroundTint="@color/color_1"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toStartOf="@id/allow_button"
-        app:layout_constraintHorizontal_chainStyle="spread"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/margin_bottom_guideline"
+        android:gravity="center">
 
-        app:layout_constraintTop_toBottomOf="@id/permission_desc" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/exit_button"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:fontFamily="@font/merriweather_bold"
+            android:text="@string/not_now"
+            app:backgroundTint="@color/color_1"
+            android:layout_marginHorizontal="15sp"
+            app:cornerRadius="15dp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/allow_button"
-        android:layout_width="120sp"
-        android:layout_height="50sp"
-        android:text="@string/set_camera"
-        app:backgroundTint="@color/color_1"
-        app:cornerRadius="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/permission_desc"
-        app:layout_constraintStart_toEndOf="@id/exit_button"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/allow_button"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:fontFamily="@font/merriweather_bold"
+            android:text="@string/set_camera"
+            android:layout_marginHorizontal="15sp"
+            app:backgroundTint="@color/color_1"
+            app:cornerRadius="15dp"/>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

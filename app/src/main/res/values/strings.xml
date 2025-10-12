@@ -14,4 +14,9 @@
     </string>
     <string name="set_camera">Allow Access</string>
     <string name="not_now">Exit Game</string>
+
+    <!-- Loading Screen Texts   -->
+    <string name="did_you_know">Did You Know?</string>
+    <string name="trivia_header">Trivia Header Text</string>
+    <string name="trivia">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
 </resources>
