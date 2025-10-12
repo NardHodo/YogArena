@@ -7,7 +7,7 @@
     <!-- Camera Permissions Screen   -->
     <string name="camera_permissions_header">CAMERA PERMISSIONS</string>
     <string name="camera_permissions_desc">
-       To fully unlock your YogArena experience, we need access to your camera.
+       To fully unlock your YogArena experience, it needs an access to your camera.
         This allows the app to detect your movements and form, in order to provide accurate
         feedback and measure your overall performance. Camera Access is fully required
         in order to proceed.
@@ -19,4 +19,29 @@
     <string name="did_you_know">Did You Know?</string>
     <string name="trivia_header">Trivia Header Text</string>
     <string name="trivia">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+
+
+    <!-- Main Menu Texts   -->
+    <string name="player_name">Player Name</string>
+    <string name="play_button">PLAY</string>
+
+    <!-- Daily Goals Header   -->
+    <string name="daily_goals_header">Daily Goals</string>
+    <string name="daily_goals_creator">Create your own personal Daily Goals</string>
+
+    <!-- Random Trivia Text   -->
+    <string name="trivia_header_1">Yoga Goes Way Back</string>
+    <string name="trivia_header_2">Just For Men</string>
+    <string name="trivia_header_3">Longest Yoga Lesson</string>
+    <string name="trivia_header_4">The Beatles</string>
+    <string name="trivia_header_5">Oldest Teacher</string>
+
+    <string name="trivia_desc_1">The Rig Veda, written over 5,000 years ago, contains the earliest references to yoga.</string>
+    <string name="trivia_desc_2">Women were not invited to yoga classes until 1937! Nowadays, studies suggest that 72% of yoga practitioners are women and there is a strong movement of creating a space for more men to want to practice again.</string>
+    <string name="trivia_desc_3">The longest yoga lesson lasted 56 hrs 57 min and 21 sec and was achieved by K.P. Ranchana in India, from 19 to 21 June 2017.</string>
+    <string name="trivia_desc_4">George Harrison from The Beatles was a famous yogi.  It was not a secret, as evidenced by his hit song, My Sweet Lord.</string>
+    <string name="trivia_desc_5">Tao Porchon-Lynch is the world’s oldest yoga instructor and shows no sign of slowing down as she embraces her second century with the same can-do attitude that has shaped her life. She says the secret to longevity is to live every day full of the “joy of life”.</string>
+
+
+
 </resources>

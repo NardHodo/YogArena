@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:theme="@style/Theme.Design.Light.NoActionBar"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/color_4">
 
@@ -54,7 +55,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/exit_button"
-            android:layout_width="150sp"
+            android:layout_width="wrap_content"
             android:layout_height="50sp"
             android:fontFamily="@font/merriweather_bold"
             android:text="@string/not_now"
@@ -64,7 +65,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/allow_button"
-            android:layout_width="150sp"
+            android:layout_width="wrap_content"
             android:layout_height="50sp"
             android:fontFamily="@font/merriweather_bold"
             android:text="@string/set_camera"
