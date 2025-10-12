@@ -2,4 +2,12 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- Main Color Pallete   -->
+    <color name="color_1">#24271D</color>
+    <color name="color_2">#59817B</color>
+    <color name="color_3">#C9D7C5</color>
+    <color name="color_4">#E9EBE5</color>
+    <color name="color_5">#676140</color>
+
 </resources>

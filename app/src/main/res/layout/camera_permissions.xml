@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/color_4">
+
+    <ImageView
+        android:id="@+id/camera_permissions_icon"
+        android:src="@drawable/camera_permission_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/margin_top_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.95"/>
+
+
+    <TextView
+        android:id="@+id/permission_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_medium"
+        android:text="@string/camera_permissions_desc"
+        app:layout_constraintTop_toBottomOf="@id/camera_permissions_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/margin_bottom_guideline"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exit_button"
+        android:layout_width="120sp"
+        android:layout_height="50sp"
+        android:text="@string/not_now"
+        app:backgroundTint="@color/color_1"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toStartOf="@id/allow_button"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/permission_desc" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/allow_button"
+        android:layout_width="120sp"
+        android:layout_height="50sp"
+        android:text="@string/set_camera"
+        app:backgroundTint="@color/color_1"
+        app:cornerRadius="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/permission_desc"
+        app:layout_constraintStart_toEndOf="@id/exit_button"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

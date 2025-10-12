@@ -8,25 +8,36 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:layout_width="500dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
         android:layout_margin="16dp"
         android:adjustViewBounds="true"
         android:id="@+id/loading_logo"
         android:src="@drawable/loading"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/loading_message_guideline"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/loading_message_guideline"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.90"/>
+    
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/loading_screen_text"
+        android:text="@string/launch_screen_loading"
+        android:fontFamily="@font/nunito_semibold"
+        android:textSize="16sp"
+        android:textColor="@color/color_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Retrieving Version Info"
-        android:layout_marginBottom="20sp"/>
+        app:layout_constraintTop_toBottomOf="@id/loading_logo"
+        app:layout_constraintVertical_bias="0.9"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
