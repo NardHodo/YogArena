@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="@color/color_1"
+    android:gravity="center">
+    
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cornerRadius="0dp"
+        app:backgroundTint="@color/color_4"
+        android:text="@string/overview"
+        android:textColor="@color/color_1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="17sp"
+        android:fontFamily="@font/nunito_extrabold"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cornerRadius="0dp"
+        app:backgroundTint="@color/color_4"
+        android:text="@string/performance"
+        android:textColor="@color/color_1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="17sp"
+        android:fontFamily="@font/nunito_extrabold"
+        />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cornerRadius="0dp"
+        app:backgroundTint="@color/color_4"
+        android:text="@string/badges"
+        android:textColor="@color/color_1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="17sp"
+        android:fontFamily="@font/nunito_extrabold"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:cornerRadius="0dp"
+        app:backgroundTint="@color/color_4"
+        android:text="@string/leaderboards"
+        android:textColor="@color/color_1"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="17sp"
+        android:fontFamily="@font/nunito_extrabold"/>
+
+</LinearLayout>
