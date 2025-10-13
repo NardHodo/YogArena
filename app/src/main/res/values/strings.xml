@@ -43,5 +43,11 @@
     <string name="trivia_desc_5">Tao Porchon-Lynch is the world’s oldest yoga instructor and shows no sign of slowing down as she embraces her second century with the same can-do attitude that has shaped her life. She says the secret to longevity is to live every day full of the “joy of life”.</string>
 
 
+    <!-- Player Profile Navbar   -->
+    <string name="overview">Overview</string>
+    <string name="performance">Performance</string>
+    <string name="badges">Badges</string>
+    <string name="leaderboards">Leaderboards</string>
+
 
 </resources>

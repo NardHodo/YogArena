@@ -55,7 +55,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/exit_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="50sp"
             android:fontFamily="@font/merriweather_bold"
             android:text="@string/not_now"
@@ -65,7 +65,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/allow_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150sp"
             android:layout_height="50sp"
             android:fontFamily="@font/merriweather_bold"
             android:text="@string/set_camera"
