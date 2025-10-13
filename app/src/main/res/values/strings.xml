@@ -49,5 +49,22 @@
     <string name="badges">Badges</string>
     <string name="leaderboards">Leaderboards</string>
 
+    <!--  Player Overview Texts  -->
+    <string name="overview_player_name">PlayerName</string>
+    <string name="sessions_played">Sessions Played:</string>
+    <string name="total_playtime">Total Playtime:</string>
+    <string name="longest_daily_streak">Longest Daily Streak:</string>
+    <string name="daily_goals_finished">Daily Goals Finished:</string>
+
+    <!-- Player Performance Texts   -->
+    <string name="drop_down_label">Last 7 Days</string>
+    <string name="average">Average Form Accuracy:</string>
+    <string name="completion">Routine Completion Rate:</string>
+    <string name="variety">Pose Variety Score:</string>
+    <string name="hold">Longest Pose Hold:</string>
+
+    <!--  Badges  -->
+    <string name="collection">Collection Progress:</string>
+
 
 </resources>

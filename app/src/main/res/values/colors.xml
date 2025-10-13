@@ -10,6 +10,9 @@
     <color name="color_4">#E9EBE5</color>
     <color name="color_5">#676140</color>
     <color name="color_6">#678C80</color>
+
+    <!-- Leaderboard Standing BG   -->
+    <color name="leaderboard">#B3EEEEDA</color>
     
     <!--  Daily Goals Color Palette   -->
     <color name="daily_goals_1">#E2D6C8</color>
