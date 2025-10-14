@@ -13,6 +13,9 @@
 
     <!-- Leaderboard Standing BG   -->
     <color name="leaderboard">#B3EEEEDA</color>
+
+    <!-- Background Overlay   -->
+    <color name="background_overlay">#4DE9EBE5</color>
     
     <!--  Daily Goals Color Palette   -->
     <color name="daily_goals_1">#E2D6C8</color>

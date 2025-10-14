@@ -93,15 +93,14 @@
                 android:layout_height="0dp"
                 app:layout_constraintBottom_toBottomOf="@id/margin_bottom"
                 app:layout_constraintEnd_toEndOf="@id/margin_scrollable_end"
-                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toEndOf="@id/back_button"
-                app:layout_constraintTop_toBottomOf="@id/margin_scrollable_top"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintTop_toBottomOf="@id/margin_scrollable_top">
 
-                <include
-                    layout="@layout/fragment_overview"
+                <FrameLayout
+                    android:id="@+id/main_content"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"/>
             </RelativeLayout>
 
 

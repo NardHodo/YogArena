@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_2">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_top"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.02"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_center_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/margin_center_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <Spinner
+            android:id="@+id/performance_dropdown"
+            android:layout_width="300sp"
+            android:layout_height="25sp"
+            android:background="@drawable/drop_down"
+            app:layout_constraintTop_toBottomOf="@id/margin_top"
+            app:layout_constraintStart_toEndOf="@id/margin_start"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/performance_dropdown"
+            app:layout_constraintStart_toEndOf="@id/margin_start"
+            app:layout_constraintEnd_toStartOf="@id/margin_center_left"
+            app:layout_constraintBottom_toTopOf="@id/margin_bottom">
+
+            <!-- Accuracy -->
+            <RelativeLayout
+                android:id="@+id/accuracy_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/accuracy_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/color_4"/>
+
+                <TextView
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/accuracy_header"
+                    android:textSize="13sp"
+                    android:text="0%"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/color_4"/>
+            </RelativeLayout>
+
+            <!-- Completion -->
+            <RelativeLayout
+                android:id="@+id/completion_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/accuracy_group">
+
+                <TextView
+                    android:id="@+id/completion_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/variety"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/color_4"/>
+
+                <TextView
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/completion_header"
+                    android:textSize="13sp"
+                    android:text="0"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/color_4"/>
+            </RelativeLayout>
+
+            <!-- Variety -->
+            <RelativeLayout
+                android:id="@+id/variety_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/completion_group">
+
+                <TextView
+                    android:id="@+id/variety_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/variety"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/color_4"/>
+
+                <TextView
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/variety_header"
+                    android:textSize="13sp"
+                    android:text="0"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/color_4"/>
+            </RelativeLayout>
+
+            <!-- Pose Hold -->
+            <RelativeLayout
+                android:id="@+id/pose_hold_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="40sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/variety_group">
+
+                <TextView
+                    android:id="@+id/pose_hold_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hold"
+                    android:textSize="13sp"
+                    android:fontFamily="@font/nunito_medium"
+                    android:textColor="@color/color_4"/>
+
+                <TextView
+                    android:layout_marginHorizontal="10sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/pose_hold_header"
+                    android:textSize="13sp"
+                    android:text="00:00"
+                    android:fontFamily="@font/nunito_extrabold"
+                    android:textColor="@color/color_4"/>
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="@drawable/pentago_stats_initial"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toEndOf="@id/margin_center_right"
+            app:layout_constraintTop_toBottomOf="@id/margin_top"
+            app:layout_constraintBottom_toTopOf="@id/margin_bottom"
+            app:layout_constraintEnd_toStartOf="@id/margin_end"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

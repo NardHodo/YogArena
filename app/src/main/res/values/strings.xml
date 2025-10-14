@@ -65,6 +65,13 @@
 
     <!--  Badges  -->
     <string name="collection">Collection Progress:</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--  Routine Selection  -->
+    <string name="select_routine">Select Routine</string>
+    <string name="navbar_routine_1">From YogArena</string>
+    <string name="navbar_routine_2">Custom Routines</string>
 
 
 </resources>

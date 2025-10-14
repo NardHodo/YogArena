@@ -29,34 +29,34 @@ public class Loading extends AppCompatActivity {
         hideSystemUI();
 
         new Handler(Looper.getMainLooper()).postDelayed(() -> {
-           setContentView(R.layout.loading_screen);
-           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-           loading = findViewById(R.id.progressLinear);
-           triviaHeader = findViewById(R.id.trivia_header);
-           triviaDescription = findViewById(R.id.trivia);
+            setContentView(R.layout.loading_screen);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+            loading = findViewById(R.id.progressLinear);
+            triviaHeader = findViewById(R.id.trivia_header);
+            triviaDescription = findViewById(R.id.trivia);
 
-           String[] triviaTitles = {
-                   getString(R.string.trivia_header_1),
-                   getString(R.string.trivia_header_2),
-                   getString(R.string.trivia_header_3),
-                   getString(R.string.trivia_header_4),
-                   getString(R.string.trivia_header_5)
-           };
+            String[] triviaTitles = {
+                    getString(R.string.trivia_header_1),
+                    getString(R.string.trivia_header_2),
+                    getString(R.string.trivia_header_3),
+                    getString(R.string.trivia_header_4),
+                    getString(R.string.trivia_header_5)
+            };
 
-           String[] triviaDescriptions = {
-                   getString(R.string.trivia_desc_1),
-                   getString(R.string.trivia_desc_2),
-                   getString(R.string.trivia_desc_3),
-                   getString(R.string.trivia_desc_4),
-                   getString(R.string.trivia_desc_5)
-           };
+            String[] triviaDescriptions = {
+                    getString(R.string.trivia_desc_1),
+                    getString(R.string.trivia_desc_2),
+                    getString(R.string.trivia_desc_3),
+                    getString(R.string.trivia_desc_4),
+                    getString(R.string.trivia_desc_5)
+            };
 
-           Random random = new Random();
-           int triviaIndex = random.nextInt(triviaTitles.length);
+            Random random = new Random();
+            int triviaIndex = random.nextInt(triviaTitles.length);
 
-           triviaHeader.setText(triviaTitles[triviaIndex]);
-           triviaDescription.setText(triviaDescriptions[triviaIndex]);
-           startLoading();
+            triviaHeader.setText(triviaTitles[triviaIndex]);
+            triviaDescription.setText(triviaDescriptions[triviaIndex]);
+            startLoading();
         }, 800);
     }
 
@@ -68,7 +68,7 @@ public class Loading extends AppCompatActivity {
                     if(loading != null){
                         loading.setProgress(progress,true);
                     }
-                    });
+                });
                 try {
                     Thread.sleep(100);
                 } catch (InterruptedException e) {
@@ -77,10 +77,10 @@ public class Loading extends AppCompatActivity {
             }
 
             handler.post(()-> {
-               Intent intent = new Intent(Loading.this, Main_Menu.class);
-               startActivity(intent);
-               overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-               finish();
+                Intent intent = new Intent(Loading.this, Main_Menu.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                finish();
             });
         }).start();
     }
