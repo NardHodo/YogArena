@@ -73,5 +73,13 @@
     <string name="navbar_routine_1">From YogArena</string>
     <string name="navbar_routine_2">Custom Routines</string>
 
+    <!-- Session Selection   -->
+    <string name="back_to_menu">Back to Menu</string>
+    <string name="session_1">Sitting Yoga</string>
+    <string name="session_2"></string>
+    <string name="session_3"></string>
+    <string name="session_4"></string>
+    <string name="session_5"></string>
+
 
 </resources>

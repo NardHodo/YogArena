@@ -15,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YogArena">
         <activity
-            android:name=".MainActivity"
+            android:name=".Routine_Selection"
             android:exported="true"
             android:launchMode="singleTop">
             <intent-filter>

@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     android:background="@color/color_4"
     android:gravity="center">
-    
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/predefined_routines"
         android:layout_width="0dp"
@@ -14,7 +14,6 @@
         android:layout_weight="1"
         android:text="@string/navbar_routine_1"
         android:fontFamily="@font/nunito_bold"
-        android:textSize="15sp"
         android:textColor="@color/color_1"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
@@ -29,11 +28,11 @@
         android:layout_weight="1"
         android:text="@string/navbar_routine_2"
         android:fontFamily="@font/nunito_bold"
-        android:textSize="15sp"
         android:textColor="@color/color_1"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
+        android:autoSizeMaxTextSize="17sp"
         app:backgroundTint="@color/color_4"
         app:cornerRadius="0dp"/>
-    
+
 </LinearLayout>
