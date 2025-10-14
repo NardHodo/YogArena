@@ -74,12 +74,24 @@
     <string name="navbar_routine_2">Custom Routines</string>
 
     <!-- Session Selection   -->
-    <string name="back_to_menu">Back to Menu</string>
-    <string name="session_1">Sitting Yoga</string>
-    <string name="session_2"></string>
-    <string name="session_3"></string>
-    <string name="session_4"></string>
-    <string name="session_5"></string>
+    <string name="session_one_header">Sitting Yoga</string>
 
+    <!-- Best Attempts  -->
+    <string name="best_attempts">Best Attempts</string>
+
+    <!-- Pre-game Lobby   -->
+    <string name="start_session">Start Session</string>
+
+    <!--  Routine Tutorial   -->
+    <string name="tutorial_header_first">YogArena Routines</string>"
+    <string name="tutorial_desc_first">Each YogArena routine is composed of session sets with corresponding pose types.  You can try them in any order that suits you or to just try them all out. However, finishing the routine in its designated order will earn you more rewards</string>"
+    <string name="next">Next</string>
+
+    <string name="tutorial_header_second">Custom Routines</string>
+    <string name="tutorial_desc_second">You could select some of these session sets from the pre-assigned routines to your own yoga routine, allowing you to personalize your journey and make each practice uniquely yours.</string>
+    <string name="finish">Finish</string>
+
+    <!--  Session Settings  -->
+    <string name="auto_proceed">Auto Proceed:</string>
 
 </resources>

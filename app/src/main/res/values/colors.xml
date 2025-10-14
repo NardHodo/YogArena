@@ -14,6 +14,9 @@
     <!-- Leaderboard Standing BG   -->
     <color name="leaderboard">#B3EEEEDA</color>
 
+    <!-- Best Attempts BG  -->
+    <color name="best_attempts">#DBE4DD</color>
+
     <!-- Background Overlay   -->
     <color name="background_overlay">#4DE9EBE5</color>
     
