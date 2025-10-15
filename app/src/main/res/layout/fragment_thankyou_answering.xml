@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.228" />
+        app:layout_constraintVertical_bias="0.228"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/Finish_button"
@@ -34,7 +35,8 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.87" />
+        app:layout_constraintVertical_bias="0.87"
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/textView8"
@@ -47,6 +49,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/black"/>
+    <FrameLayout
+        android:id="@+id/thank_you_mess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

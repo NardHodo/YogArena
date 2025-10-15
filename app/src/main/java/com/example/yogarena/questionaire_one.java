@@ -3,10 +3,20 @@ package com.example.yogarena;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,8 +25,13 @@ import android.view.ViewGroup;
  */
 public class questionaire_one extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    private QuestionaireViewModel viewModel;
+    private EditText inputedAge;
+    private RadioGroup radioGroupExperience;
+    private Button nextButton;
+    private Button backButton;
+
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -58,7 +73,52 @@ public class questionaire_one extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_questionaire_one, container, false);
+        View view = inflater.inflate(R.layout.fragment_questionaire_one, container, false);
+
+        viewModel = new ViewModelProvider(requireActivity()).get(QuestionaireViewModel.class);
+
+        inputedAge = view.findViewById(R.id.Inputed_Age);
+        radioGroupExperience = view.findViewById(R.id.radioGroup);
+        nextButton = view.findViewById(R.id.Next_Button);
+        backButton = view.findViewById(R.id.Back_Button);
+
+
+
+
+
+
+        nextButton.setOnClickListener(v -> {
+            String ageStr = inputedAge.getText().toString().trim();
+            if (ageStr.isEmpty()){
+                inputedAge.setError("Please enter your age");
+                return;
+            }
+            int age = Integer.parseInt(ageStr);
+
+            int selectedID = radioGroupExperience.getCheckedRadioButtonId();
+            if(selectedID == -1){
+                Toast.makeText(requireContext(), "Please select an option", Toast.LENGTH_SHORT).show();
+                return;
+            }
+
+            RadioButton selectedRadioButton = view.findViewById(selectedID);
+            String experience = selectedRadioButton.getText().toString();
+
+            viewModel.setAge(age);
+            viewModel.setYogaExperience(experience);
+
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.questionaire_one, new questionaire_two())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+
+
+        backButton.setOnClickListener(v -> {
+            requireActivity().getSupportFragmentManager().popBackStack();
+        });
+
+        return view;
     }
 }

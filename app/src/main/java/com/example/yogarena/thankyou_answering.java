@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -58,7 +59,20 @@ public class thankyou_answering extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_thankyou_answering, container, false);
+        View view = inflater.inflate(R.layout.fragment_thankyou_answering, container, false);
+
+        Button Finish_button = view.findViewById(R.id.Finish_button);
+
+        Finish_button.setOnClickListener(v -> {
+            Profile_Setup profileSetup = new Profile_Setup();
+            getActivity().getSupportFragmentManager().beginTransaction()
+                    .setCustomAnimations(R.anim.fade_in,R.anim.fade_out)
+                    .replace(R.id.thank_you_mess, profileSetup)
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+
+        return view;
     }
 }

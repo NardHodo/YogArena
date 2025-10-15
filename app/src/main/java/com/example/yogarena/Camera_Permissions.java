@@ -24,7 +24,7 @@ public class Camera_Permissions extends AppCompatActivity {
             registerForActivityResult(new ActivityResultContracts.RequestPermission(), isGranted -> {
                 if (isGranted) {
                     Toast.makeText(this, "Welcome to YogArena!", Toast.LENGTH_SHORT).show();
-                    transitionToLoading();
+                    transitionToLogin();
                 } else {
                     Toast.makeText(this, "Camera Access is Required to Proceed", Toast.LENGTH_LONG).show();
                 }
@@ -53,11 +53,14 @@ public class Camera_Permissions extends AppCompatActivity {
         }
     }
 
-    private void transitionToLoading(){
-        Intent intent = new Intent(this, Loading.class);
-        startActivity(intent);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        finish();
+    private void transitionToLogin(){
+        LogIn loginFragment = new LogIn();
+
+        getSupportFragmentManager().beginTransaction()
+                .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                .replace(R.id.loadingFragment, loginFragment)
+                .addToBackStack(null)
+                .commit();
     }
 
     //Para Sakop Buong Screen

@@ -76,11 +76,18 @@ public class Loading extends AppCompatActivity {
                 }
             }
 
-            handler.post(()-> {
-                Intent intent = new Intent(Loading.this, Main_Menu.class);
-                startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-                finish();
+            handler.post(() -> {
+                if (isFinishing() || isDestroyed()) return;
+
+                View fragmentContainer = findViewById(R.id.loadingFragment);
+                fragmentContainer.setVisibility(View.VISIBLE);
+
+                LogIn loginFragment = new LogIn();
+
+                getSupportFragmentManager().beginTransaction()
+                        .setCustomAnimations(R.anim.fade_in, R.anim.fade_out)
+                        .replace(R.id.loadingFragment, loginFragment)
+                        .commit();
             });
         }).start();
     }

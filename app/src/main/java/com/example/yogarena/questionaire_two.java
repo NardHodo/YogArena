@@ -3,10 +3,19 @@ package com.example.yogarena;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,14 +24,20 @@ import android.view.ViewGroup;
  */
 public class questionaire_two extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
+
     private String mParam1;
     private String mParam2;
+
+    private QuestionaireViewModel viewModel;
+    private RadioGroup radioGroup;
+
+    private Button nextButton;
+    private Button backButton;
 
     public questionaire_two() {
         // Required empty public constructor
@@ -58,7 +73,38 @@ public class questionaire_two extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_questionaire_two, container, false);
+        View view = inflater.inflate(R.layout.fragment_questionaire_two, container, false);
+
+        viewModel = new ViewModelProvider(requireActivity()).get(QuestionaireViewModel.class);
+        RadioGroup radioGroup = view.findViewById(R.id.radioGroup);
+
+         nextButton = view.findViewById(R.id.Next_Button);
+         backButton = view.findViewById(R.id.Back_Button);
+
+
+
+
+        nextButton.setOnClickListener(v -> {
+            int selectedID = radioGroup.getCheckedRadioButtonId();
+            if(selectedID == -1){
+                Toast.makeText(requireContext(), "Please select an option", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            RadioButton selectedRadioButton = view.findViewById(selectedID);
+            String reason = selectedRadioButton.getText().toString();
+
+            viewModel.setYogaReasons(reason);
+
+            requireActivity().getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.questionaire_two, new questionaire_three())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        backButton.setOnClickListener(v -> {
+            requireActivity().getSupportFragmentManager().popBackStack();
+        });
+
+        return view;
     }
 }

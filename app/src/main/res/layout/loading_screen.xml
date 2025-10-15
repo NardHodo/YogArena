@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/color_4">
 
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/main_guideline_bottom"
         android:layout_width="wrap_content"
@@ -90,6 +91,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:trackColor="@color/color_3"
         app:trackThickness="8dp"/>
+
+    <FrameLayout
+        android:id="@+id/loadingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

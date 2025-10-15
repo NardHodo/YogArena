@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "6905859745",
+    "project_id": "yogarena-96ce8",
+    "storage_bucket": "yogarena-96ce8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:6905859745:android:c87668ef0e857ff750eae0",
+        "android_client_info": {
+          "package_name": "com.example.yogarena"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBj0BluZK4raU10q2o9DXd43gnQjMqv8k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

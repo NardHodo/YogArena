@@ -20,42 +20,43 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.149"
+        android:textColor="@color/black"/>
 
     <RadioGroup
         android:id="@+id/radioGroup"
-        android:layout_width="416dp"
+        android:layout_width="wrap_content"
         android:layout_height="104dp"
+        android:orientation="horizontal"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.636"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671">
+        app:layout_constraintVertical_bias="0.71">
 
-        <LinearLayout
+
+        <RadioButton
+            android:id="@+id/No_Experience_at_all"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginEnd="25dp"
+            android:fontFamily="@font/merriweather"
+            android:text="No Experience at all"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
 
-            <RadioButton
-                android:id="@+id/No_Experience_at_all"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="45dp"
-                android:fontFamily="@font/merriweather"
-                android:text="No Experience at all"
-                android:textSize="12sp" />
 
-            <RadioButton
-                android:id="@+id/Attended_a_few_classes"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/merriweather"
-                android:text="Attended a few classes"
-                android:textSize="12sp" />
-
-        </LinearLayout>
+        <RadioButton
+            android:id="@+id/Attended_a_few_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/merriweather"
+            android:text="Attended a few classes"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:layout_marginEnd="25dp"/>
 
         <RadioButton
             android:id="@+id/Full_time_yoga_enthusiast"
@@ -63,6 +64,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/merriweather"
             android:text="Full-time yoga enthusiast"
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
 
@@ -80,7 +82,9 @@
         app:layout_constraintHorizontal_bias="0.239"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
+        app:layout_constraintVertical_bias="0.384"
+        android:textColor="@color/black"
+        />
 
     <TextView
         android:id="@+id/textView6"
@@ -94,7 +98,8 @@
         app:layout_constraintHorizontal_bias="0.279"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481" />
+        app:layout_constraintVertical_bias="0.481"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/Inputed_Age"
@@ -102,25 +107,27 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="number"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="0.366" />
 
     <Button
-        android:id="@+id/Skip_Button"
+        android:id="@+id/Back_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:text="Skip"
+        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/Next_Button"
@@ -133,6 +140,12 @@
         app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
+    <FrameLayout
+        android:id="@+id/questionaire_one"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

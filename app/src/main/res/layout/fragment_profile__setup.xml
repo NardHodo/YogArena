@@ -65,7 +65,7 @@
             app:layout_constraintVertical_bias="0.466" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/Confirm_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/white"
@@ -100,12 +100,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.632">
+            app:layout_constraintVertical_bias="0.632"
+            android:orientation="horizontal"
+            android:id="@+id/grpGender">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+
 
                 <RadioButton
                     android:id="@+id/Male"
@@ -136,7 +135,7 @@
                     android:paddingEnd="40dp"
                     android:text="Prefer not to say"
                     android:textColor="@color/white" />
-            </LinearLayout>
+
         </RadioGroup>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -21,7 +21,8 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.149"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -36,7 +37,8 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.287" />
+        app:layout_constraintVertical_bias="0.287"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/Back_Button"
@@ -49,7 +51,8 @@
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/Finish_button"
@@ -62,7 +65,8 @@
         app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
     <RadioGroup
         android:layout_width="wrap_content"
@@ -72,12 +76,14 @@
         app:layout_constraintHorizontal_bias="0.522"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.542">
+        app:layout_constraintVertical_bias="0.542"
+        android:textColor="@color/black"
+        android:orientation="horizontal"
+        android:id="@+id/radioGroupHC"
+        >
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
+
+
 
             <RadioButton
                 android:id="@+id/Yes"
@@ -86,7 +92,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/merriweather"
                 android:paddingEnd="40dp"
-                android:text="Yes" />
+                android:text="Yes"
+                android:textColor="@color/black"/>
 
             <RadioButton
                 android:id="@+id/No"
@@ -95,7 +102,8 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/merriweather"
                 android:paddingEnd="40dp"
-                android:text="No" />
+                android:text="No"
+                android:textColor="@color/black"/>
 
             <RadioButton
                 android:id="@+id/Not_Sure"
@@ -104,8 +112,9 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/merriweather"
                 android:paddingEnd="40dp"
-                android:text="Not Sure" />
-        </LinearLayout>
+                android:text="Not Sure"
+                android:textColor="@color/black"/>
+
     </RadioGroup>
 
     <TextView
@@ -120,7 +129,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698"
         android:textSize="16dp"
-        android:fontFamily="@font/merriweather"/>
+        android:fontFamily="@font/merriweather"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/health_condition"
@@ -134,5 +144,12 @@
         app:layout_constraintHorizontal_bias="0.599"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.704"
+        android:textColor="@color/black"/>
+
+    <FrameLayout
+        android:id="@+id/questionaire_three"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>

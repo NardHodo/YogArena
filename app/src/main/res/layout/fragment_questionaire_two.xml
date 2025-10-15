@@ -20,7 +20,8 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
+        app:layout_constraintVertical_bias="0.149"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/textView5"
@@ -34,20 +35,22 @@
         app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.254" />
+        app:layout_constraintVertical_bias="0.254"
+        android:textColor="@color/black"/>
 
     <Button
-        android:id="@+id/Skip_Button"
+        android:id="@+id/Back_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
-        android:text="Skip"
+        android:text="Back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
     <Button
         android:id="@+id/Next_Button"
@@ -60,88 +63,97 @@
         app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.917" />
+        app:layout_constraintVertical_bias="0.917"
+        android:textColor="@color/white"/>
 
     <RadioGroup
-        android:layout_width="786dp"
-        android:layout_height="183dp"
+        android:id="@+id/radioGroup"
+        android:layout_width="410dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.582"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.578">
+        app:layout_constraintVertical_bias="0.707">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="160dp">
 
-            <RadioButton
-                android:id="@+id/Improving_my_mental_health"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Improving my physical health and flexibility"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.133" />
+        <RadioButton
+            android:id="@+id/Improving_my_mental_health"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Improving my physical health and flexibility"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.118" />
 
-            <RadioButton
-                android:id="@+id/Achieving_spiritual_growth_or_inner_peace"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Achieving spiritual growth or inner peace"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.043"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+        <RadioButton
+            android:id="@+id/Achieving_spiritual_growth_or_inner_peace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingEnd="9dp"
+            android:text="Achieving spiritual growth or inner peace"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.166"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.496" />
 
-            <RadioButton
-                android:id="@+id/Enchancing_my_mental_focus_and_mindfulness"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Enchancing mental focus and mindfulness"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.044"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.928" />
+        <RadioButton
+            android:id="@+id/Enchancing_my_mental_focus_and_mindfulness"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enchancing mental focus and mindfulness"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.169"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.881" />
 
-            <RadioButton
-                android:id="@+id/Participating_in_a_community_or_social_activity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Participating in a community or social activity"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.843"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.258" />
+        <RadioButton
+            android:id="@+id/Participating_in_a_community_or_social_activity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participating in a community or social activity"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.843"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.14" />
 
-            <RadioButton
-                android:id="@+id/Recommendation_of_a_friend"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recommendation of a friend"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.707"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.857" />
+        <RadioButton
+            android:id="@+id/Recommendation_of_a_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recommendation of a friend"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.683"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.496" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </RadioGroup>
-
+        <FrameLayout
+        android:id="@+id/questionaire_two"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
