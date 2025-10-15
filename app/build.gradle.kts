@@ -55,4 +55,28 @@ dependencies {
     //firebase
     implementation(platform("com.google.firebase:firebase-bom:34.4.0"))
     implementation("com.google.firebase:firebase-analytics")
+
+    //camera dependencies
+    val cameraxVersions = "1.3.1"
+    implementation("androidx.camera:camera-camera2:$cameraxVersions")
+    implementation("androidx.camera:camera-lifecycle:$cameraxVersions")
+    implementation("androidx.camera:camera-view:$cameraxVersions")
+    implementation("androidx.camera:camera-core:$cameraxVersions")
+
+    //tensorflow
+    implementation("org.tensorflow:tensorflow-lite:2.17.0") {
+        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
+    }
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.17.0") {
+        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
+    }
+    implementation("org.tensorflow:tensorflow-lite-support:0.4.4") {
+        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
+    }
+    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4") {
+        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
+    }
+    implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4") {
+        exclude(group = "com.google.ai.edge.litert", module = "litert-api")
+    }
 }

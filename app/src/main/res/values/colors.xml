@@ -23,4 +23,7 @@
     <!--  Daily Goals Color Palette   -->
     <color name="daily_goals_1">#E2D6C8</color>
     <color name="daily_goals_2">#5A4C43</color>"
+
+    <color name="feedback_good_green">#678C80</color>
+    <color name="feedback_warning_color">#8024271D</color>
 </resources>

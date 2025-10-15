@@ -84,7 +84,8 @@
 
     <!--  Routine Tutorial   -->
     <string name="tutorial_header_first">YogArena Routines</string>"
-    <string name="tutorial_desc_first">Each YogArena routine is composed of session sets with corresponding pose types.  You can try them in any order that suits you or to just try them all out. However, finishing the routine in its designated order will earn you more rewards</string>"
+    <string name="tutorial_desc_first">Each YogArena routine is composed of session sets with corresponding pose types.  You can try them in any order that suits you or to just try them all out. However, finishing the routine in its designated order will earn you more rewards</string>
+    "
     <string name="next">Next</string>
 
     <string name="tutorial_header_second">Custom Routines</string>
