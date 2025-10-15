@@ -93,5 +93,8 @@
 
     <!--  Session Settings  -->
     <string name="auto_proceed">Auto Proceed:</string>
+    <string name="camera_view">Camera View:</string>
+    <string name="progress_bar">Progress Bar:</string>
+    <string name="overlays">Overlays:</string>
 
 </resources>
