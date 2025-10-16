@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_4">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/pre_lobby_image"
+            android:scaleType="centerCrop"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_overlay"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.97"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/pause_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.91"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_photo_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.2"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_photo_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.8"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/pause_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.17"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/progress_bar_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.98"/>
+
+            <ImageButton
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@drawable/dark_buttons"
+                android:src="@drawable/pause"
+                android:scaleType="centerInside"
+                android:padding="10sp"
+                app:layout_constraintStart_toEndOf="@id/pause_start"
+                app:layout_constraintEnd_toStartOf="@id/margin_end"
+                app:layout_constraintTop_toBottomOf="@id/margin_top"
+                app:layout_constraintBottom_toTopOf="@id/pause_bottom"/>
+            
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/session_progress_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@id/progress_bar_bottom"
+                app:layout_constraintEnd_toStartOf="@id/margin_photo_end"
+                app:layout_constraintStart_toEndOf="@id/margin_photo_start"/>
+
+            <FrameLayout
+                android:id="@+id/pose_picture_frame"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintTop_toBottomOf="@id/pause_bottom"
+                app:layout_constraintStart_toEndOf="@id/margin_photo_start"
+                app:layout_constraintEnd_toStartOf="@id/margin_photo_end"
+                app:layout_constraintBottom_toTopOf="@id/session_progress_bar"
+                android:layout_marginBottom="10sp">
+
+        <!--  Placeholder image, remove if necessary              -->
+                <ImageView
+                    android:id="@+id/sample_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/yoga_pose_1"/>
+            </FrameLayout>
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

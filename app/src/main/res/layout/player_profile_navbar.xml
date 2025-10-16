@@ -4,61 +4,57 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
-    android:background="@color/color_1"
+    android:background="@android:color/transparent"
     android:gravity="center">
     
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/profile_overview"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:cornerRadius="0dp"
-        app:backgroundTint="@color/color_4"
         android:text="@string/overview"
-        android:textColor="@color/color_1"
+        android:textColor="@drawable/bg_nav_text"
+        android:background="@drawable/bg_nav_button"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
         android:autoSizeMaxTextSize="17sp"
         android:fontFamily="@font/nunito_extrabold"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/profile_performance"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:cornerRadius="0dp"
-        app:backgroundTint="@color/color_4"
+        android:textColor="@drawable/bg_nav_text"
+        android:background="@drawable/bg_nav_button"
         android:text="@string/performance"
-        android:textColor="@color/color_1"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
         android:autoSizeMaxTextSize="17sp"
         android:fontFamily="@font/nunito_extrabold"
         />
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/profile_badges"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:cornerRadius="0dp"
-        app:backgroundTint="@color/color_4"
         android:text="@string/badges"
-        android:textColor="@color/color_1"
+        android:textColor="@drawable/bg_nav_text"
+        android:background="@drawable/bg_nav_button"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
         android:autoSizeMaxTextSize="17sp"
         android:fontFamily="@font/nunito_extrabold"/>
 
-    <com.google.android.material.button.MaterialButton
+    <Button
         android:id="@+id/profile_leaderboards"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        app:cornerRadius="0dp"
-        app:backgroundTint="@color/color_4"
         android:text="@string/leaderboards"
-        android:textColor="@color/color_1"
+        android:textColor="@drawable/bg_nav_text"
+        android:background="@drawable/bg_nav_button"
         android:autoSizeTextType="uniform"
         android:autoSizeMinTextSize="11sp"
         android:autoSizeMaxTextSize="17sp"

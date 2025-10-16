@@ -4,6 +4,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,7 @@ import com.google.android.material.button.MaterialButton;
 
 public class Player_Profile extends AppCompatActivity {
 
-    MaterialButton profileOverview, profilePerformance, profileBadges, profileLeaderboards;
+    Button profileOverview, profilePerformance, profileBadges, profileLeaderboards;
     ImageButton backButton;
 
     protected void onCreate(Bundle savedInstanceState){
@@ -28,19 +29,47 @@ public class Player_Profile extends AppCompatActivity {
             FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
             transaction.replace(R.id.main_content, defaultFragment);
             transaction.commit();
-
         }
 
         profileOverview = findViewById(R.id.profile_overview);
+        profileOverview.setSelected(true);
+
         profilePerformance = findViewById(R.id.profile_performance);
         profileBadges = findViewById(R.id.profile_badges);
         profileLeaderboards = findViewById(R.id.profile_leaderboards);
         backButton = findViewById(R.id.back_button);
 
-        profileOverview.setOnClickListener(v -> loadFragment(new PlayerOverviewFragment()));
-        profilePerformance.setOnClickListener(v -> loadFragment(new PlayerPerformanceFragment()));
-        profileBadges.setOnClickListener(v -> loadFragment(new PlayerBadgesFragment()));
-        profileLeaderboards.setOnClickListener(v -> loadFragment(new PlayerLeaderboards()));
+        profileOverview.setOnClickListener(v -> {
+            loadFragment(new PlayerOverviewFragment());
+            profileOverview.setSelected(true);
+            profilePerformance.setSelected(false);
+            profileBadges.setSelected(false);
+            profileLeaderboards.setSelected(false);
+        });
+
+        profilePerformance.setOnClickListener(v -> {
+            loadFragment(new PlayerPerformanceFragment());
+            profileOverview.setSelected(false);
+            profilePerformance.setSelected(true);
+            profileBadges.setSelected(false);
+            profileLeaderboards.setSelected(false);
+        });
+
+        profileBadges.setOnClickListener(v -> {
+            loadFragment(new PlayerBadgesFragment());
+            profileOverview.setSelected(false);
+            profilePerformance.setSelected(false);
+            profileBadges.setSelected(true);
+            profileLeaderboards.setSelected(false);
+        });
+
+        profileLeaderboards.setOnClickListener(v -> {
+            loadFragment(new PlayerLeaderboards());
+            profileOverview.setSelected(false);
+            profilePerformance.setSelected(false);
+            profileBadges.setSelected(false);
+            profileLeaderboards.setSelected(true);
+        });
 
         backButton.setOnClickListener(v ->{
             finish();

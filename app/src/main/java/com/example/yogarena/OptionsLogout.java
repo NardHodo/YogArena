@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageButton;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -31,6 +32,10 @@ public class OptionsLogout extends AppCompatActivity {
         });
 
         logout = findViewById(R.id.logout);
+        logout.setOnClickListener(v -> {
+            showLogoutDialog();
+        });
+
 
     }
 
@@ -50,5 +55,14 @@ public class OptionsLogout extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
+    }
+
+    private void logoutUser(){
+        //logout function here
+    }
+
+    private void showLogoutDialog(){
+        LogoutDialog logoutDialog = new LogoutDialog();
+        logoutDialog.show(getSupportFragmentManager(), "LogoutDialog");
     }
 }

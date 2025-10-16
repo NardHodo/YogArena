@@ -41,9 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkCameraPermissions(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
-
             getSupportFragmentManager().beginTransaction()
-                    .replace(android.R.id.content, new camera()) //
+                    .replace(R.id.main_activity, new camera()) //
                     .commit();
         } else{
             transitionToCameraPermissions();
