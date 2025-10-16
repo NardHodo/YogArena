@@ -43,6 +43,14 @@
         app:layout_constraintGuide_percent="0.05"/>
 
     <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_top_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/margin_bottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -65,7 +73,7 @@
             android:layout_marginTop="8sp"
             android:checked="false"
             android:text="@string/auto_proceed"
-            android:textColor="@color/color_4"
+            android:textColor="@color/color_1"
             android:fontFamily="@font/nunito_bold"
             app:layout_constraintBottom_toTopOf="@+id/camera_view_group"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +89,7 @@
             android:layout_marginTop="8sp"
             android:checked="false"
             android:text="@string/camera_view"
-            android:textColor="@color/color_4"
+            android:textColor="@color/color_1"
             android:fontFamily="@font/nunito_bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,7 +117,7 @@
             android:checked="false"
             android:fontFamily="@font/nunito_bold"
             android:text="@string/progress_bar"
-            android:textColor="@color/color_4"
+            android:textColor="@color/color_1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/overlay_group"
             app:layout_constraintTop_toTopOf="parent"
@@ -123,12 +131,44 @@
             android:checked="false"
             android:fontFamily="@font/nunito_bold"
             android:text="@string/overlays"
-            android:textColor="@color/color_4"
+            android:textColor="@color/color_1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/progress_bar_group"
             app:switchPadding="12dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/exit"
+        android:fontFamily="@font/merriweather_bold"
+        android:textColor="@color/color_4"
+        android:layout_marginHorizontal="15sp"
+        app:backgroundTint="@color/color_2"
+        app:layout_constraintStart_toEndOf="@id/margin_start"
+        app:layout_constraintEnd_toStartOf="@id/divider_vertical"
+        app:layout_constraintTop_toBottomOf="@id/margin_top_buttons"
+        app:layout_constraintBottom_toTopOf="@id/margin_bottom"
+        app:layout_constraintHorizontal_bias="1"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/save_and_exit"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="@string/save_and_exit"
+        android:fontFamily="@font/merriweather_bold"
+        android:textColor="@color/color_4"
+        android:layout_marginHorizontal="15sp"
+        app:backgroundTint="@color/color_2"
+        app:layout_constraintStart_toEndOf="@id/divider_vertical"
+        app:layout_constraintEnd_toStartOf="@id/margin_end"
+        app:layout_constraintTop_toBottomOf="@id/margin_top_buttons"
+        app:layout_constraintBottom_toTopOf="@id/margin_bottom"
+        app:layout_constraintHorizontal_bias="0"/>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

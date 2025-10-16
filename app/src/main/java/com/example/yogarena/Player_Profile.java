@@ -35,11 +35,17 @@ public class Player_Profile extends AppCompatActivity {
         profilePerformance = findViewById(R.id.profile_performance);
         profileBadges = findViewById(R.id.profile_badges);
         profileLeaderboards = findViewById(R.id.profile_leaderboards);
+        backButton = findViewById(R.id.back_button);
 
         profileOverview.setOnClickListener(v -> loadFragment(new PlayerOverviewFragment()));
         profilePerformance.setOnClickListener(v -> loadFragment(new PlayerPerformanceFragment()));
         profileBadges.setOnClickListener(v -> loadFragment(new PlayerBadgesFragment()));
         profileLeaderboards.setOnClickListener(v -> loadFragment(new PlayerLeaderboards()));
+
+        backButton.setOnClickListener(v ->{
+            finish();
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        });
 
     }
 

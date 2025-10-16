@@ -74,6 +74,7 @@
                 app:layout_constraintGuide_percent="0.06"/>
 
             <ImageButton
+                android:id="@+id/back_button"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:scaleType="centerCrop"
@@ -119,17 +120,13 @@
 
             <include
                 android:layout_width="0dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 layout="@layout/routine_selection_navbar"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/navbar_boundary"/>
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
-
-
     </FrameLayout>
 </LinearLayout>

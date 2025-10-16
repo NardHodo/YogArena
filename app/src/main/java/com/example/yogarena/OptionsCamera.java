@@ -1,36 +1,26 @@
 package com.example.yogarena;
 
-import android.content.pm.ActivityInfo;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-public class Routine_Selection extends AppCompatActivity {
-
+    public class OptionsCamera extends AppCompatActivity {
     public ImageButton backButton;
 
-    protected void onCreate(Bundle savedInstanceState){
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.routine_selection);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setContentView(R.layout.options_camera);
         hideSystemUI();
-
-        if(savedInstanceState == null){
-            Fragment defaultRoutine = new YogArena_Routine_1();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.yoga_art_container, defaultRoutine);
-            transaction.commit();
-        }
-
-        backButton = findViewById(R.id.back_button);
+        backButton = findViewById(R.id.back_button_dark);
         backButton.setOnClickListener(v -> {
             finish();
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
+
     }
 
     @SuppressWarnings("deprecation")

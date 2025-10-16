@@ -24,15 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Routine_Selection"
-            android:exported="true"
-            android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name=".Camera_Permissions"
             android:exported="false"
             android:launchMode="singleTop"
@@ -49,7 +40,48 @@
             android:exported="true"
             android:screenOrientation="landscape">
         </activity>
-
+        <activity
+            android:name=".Player_Profile"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".Routine_Selection"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".First_Session_Selection"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".Options"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".OptionsCamera"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".OptionsNotifications"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
+        <activity
+            android:name=".OptionsLogout"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape">
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

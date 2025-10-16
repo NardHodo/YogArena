@@ -19,10 +19,15 @@
 
     <!-- Background Overlay   -->
     <color name="background_overlay">#4DE9EBE5</color>
-    
+
     <!--  Daily Goals Color Palette   -->
     <color name="daily_goals_1">#E2D6C8</color>
-    <color name="daily_goals_2">#5A4C43</color>"
+    <color name="daily_goals_2">#5A4C43</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 
     <color name="feedback_good_green">#678C80</color>
     <color name="feedback_warning_color">#8024271D</color>

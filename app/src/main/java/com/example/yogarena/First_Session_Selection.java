@@ -6,30 +6,21 @@ import android.view.View;
 import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-public class Routine_Selection extends AppCompatActivity {
+public class First_Session_Selection extends AppCompatActivity {
 
-    public ImageButton backButton;
+    public ImageButton back_button;
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.routine_selection);
+        setContentView(R.layout.first_routine_session_selection);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         hideSystemUI();
 
-        if(savedInstanceState == null){
-            Fragment defaultRoutine = new YogArena_Routine_1();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-            transaction.replace(R.id.yoga_art_container, defaultRoutine);
-            transaction.commit();
-        }
-
-        backButton = findViewById(R.id.back_button);
-        backButton.setOnClickListener(v -> {
-            finish();
-            overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        back_button = findViewById(R.id.back_button);
+        back_button.setOnClickListener( v -> {
+           finish();
+           overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         });
     }
 
@@ -49,4 +40,5 @@ public class Routine_Selection extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
     }
+
 }

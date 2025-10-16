@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_4">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_bg"
+            android:scaleType="centerCrop"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_overlay"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03"/>
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.35"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.65"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/icon_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/icon_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.06"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.15"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.85"/>
+
+            <ImageButton
+                android:id="@+id/back_button_dark"
+                android:background="@android:color/transparent"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/back_button_dark"
+                android:scaleType="centerInside"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintStart_toEndOf="@id/margin_start"
+                app:layout_constraintEnd_toStartOf="@id/icon_end"
+                app:layout_constraintTop_toBottomOf="@id/icon_top" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sounds_and_display"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="@string/options_sounds"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:gravity="center"
+                android:padding="12sp"
+                android:fontFamily="@font/merriweather_bold"
+                app:backgroundTint="@color/color_2"
+                app:layout_constraintBottom_toTopOf="@id/camera"
+                app:layout_constraintEnd_toStartOf="@id/buttons_end"
+                app:layout_constraintStart_toEndOf="@id/buttons_start"
+                app:layout_constraintTop_toBottomOf="@id/buttons_top"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/camera"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/options_camera"
+                android:padding="12sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:fontFamily="@font/merriweather_bold"
+                app:backgroundTint="@color/color_2"
+                app:layout_constraintStart_toEndOf="@id/buttons_start"
+                app:layout_constraintEnd_toStartOf="@id/buttons_end"
+                app:layout_constraintTop_toBottomOf="@id/sounds_and_display"
+                app:layout_constraintBottom_toTopOf="@id/notifications"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/notifications"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/options_notification"
+                android:gravity="center"
+                android:padding="12sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:fontFamily="@font/merriweather_bold"
+                app:backgroundTint="@color/color_2"
+                app:layout_constraintTop_toBottomOf="@id/camera"
+                app:layout_constraintBottom_toTopOf="@id/account"
+                app:layout_constraintStart_toEndOf="@id/buttons_start"
+                app:layout_constraintEnd_toStartOf="@id/buttons_end"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/account"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/options_account"
+                android:padding="12sp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMaxTextSize="20sp"
+                android:autoSizeMinTextSize="12sp"
+                android:fontFamily="@font/merriweather_bold"
+                app:backgroundTint="@color/color_2"
+                app:layout_constraintTop_toBottomOf="@id/notifications"
+                app:layout_constraintStart_toEndOf="@id/buttons_start"
+                app:layout_constraintEnd_toStartOf="@id/buttons_end"
+                app:layout_constraintBottom_toTopOf="@id/buttons_bottom"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+</LinearLayout>

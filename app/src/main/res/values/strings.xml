@@ -75,6 +75,7 @@
 
     <!-- Session Selection   -->
     <string name="session_one_header">Sitting Yoga</string>
+    <string name="back_to_menu">Back to Routines</string>
 
     <!-- Best Attempts  -->
     <string name="best_attempts">Best Attempts</string>
@@ -97,5 +98,34 @@
     <string name="camera_view">Camera View:</string>
     <string name="progress_bar">Progress Bar:</string>
     <string name="overlays">Overlays:</string>
+
+    <string name="exit">Cancel</string>
+    <string name="save_and_exit">Save and Exit</string>
+
+    <!--  Options Menu  -->
+    <string name="options_sounds">Sounds and Display</string>
+    <string name="options_camera">Camera</string>
+    <string name="options_notification">Notifications</string>
+    <string name="options_account">Account</string>
+
+    <string name="notifications_header">Notifications</string>
+    <string name="dailies">Daily Goals:</string>
+    <string name="events">Events:</string>
+    <string name="notif_leaderboards">Leaderboards:</string>
+
+    <string name="logout">Log-out Account</string>
+    <!-- Logout Warning   -->
+    <string name="logout_header">Are You Sure?</string>
+    <string name="logout_desc">You will be redirected back to the Login Screen?</string>
+    <string name="logout_confirm">Confirm</string>
+    <string name="logout_cancel">Cancel</string>
+
+    <!--  Camera Settings  -->
+    <string name="camera_settings_header">Camera</string>
+    <string name="camera_test">Test Camera</string>
+    <string name="camera_revoke">Revoke Access</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
 
 </resources>

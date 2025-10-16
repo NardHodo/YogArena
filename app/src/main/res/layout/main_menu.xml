@@ -61,6 +61,7 @@
                 tools:layout_editor_absoluteX="30sp">
 
                 <ImageButton
+                    id="@+id/profile_button"
                     android:layout_width="50sp"
                     android:layout_height="match_parent"
                     android:id="@+id/profile_button"
@@ -143,6 +144,7 @@
             </RelativeLayout>
 
             <ImageButton
+                android:id="@+id/settings"
                 android:layout_width="50sp"
                 android:layout_height="50sp"
                 android:src="@drawable/game_settings"
@@ -154,6 +156,7 @@
                 app:layout_constraintEnd_toEndOf="@id/margin_end_guideline"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/play_button"
                 android:layout_width="150sp"
                 android:layout_height="60sp"
                 android:fontFamily="@font/merriweather_black"

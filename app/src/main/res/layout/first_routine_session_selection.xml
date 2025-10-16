@@ -82,7 +82,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:textAlignment="textStart"
-                android:text="string/back_to_menu"
+                android:text="@string/back_to_menu"
                 android:autoSizeTextType="uniform"
                 android:layout_marginHorizontal="10sp"
                 android:textColor="@color/color_2"

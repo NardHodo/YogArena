@@ -1,9 +1,12 @@
 package com.example.yogarena;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -58,7 +61,15 @@ public class YogArena_Routine_1 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_yog_arena__routine_1, container, false);
+        View artView = inflater.inflate(R.layout.fragment_yog_arena__routine_1, container, false);
+
+        artView.setClickable(true);
+        artView.setOnClickListener(v -> {
+            Log.d("CLICKED", "Art has been clicked");
+            Intent routineFirstSelection = new Intent(getActivity(), First_Session_Selection.class);
+            startActivity(routineFirstSelection);
+            requireActivity().overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+        });
+        return artView;
     }
 }
