@@ -10,9 +10,12 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.button.MaterialButton;
+
 public class Routine_Selection extends AppCompatActivity {
 
     public ImageButton backButton, nextLeft, nextRight;
+    public MaterialButton customRoutines, yogarenaRoutines;
     private Fragment[] routines;
     private int currentIndex = 0;
 
@@ -59,6 +62,22 @@ public class Routine_Selection extends AppCompatActivity {
                 updateButtons();
             }
         });
+
+        //navbar functionality
+        customRoutines = findViewById(R.id.custom_routines);
+        customRoutines.setOnClickListener(v->{
+            openCustomRoutines();
+            nextLeft.setVisibility(View.GONE);
+            nextRight.setVisibility(View.GONE);
+        });
+        
+        yogarenaRoutines = findViewById(R.id.predefined_routines);
+        yogarenaRoutines.setOnClickListener(v->{
+            nextLeft.setVisibility(View.GONE);
+            nextRight.setVisibility(View.VISIBLE);
+            showRoutine(0);
+        });
+
     }
 
     private void showRoutine(int index){
@@ -77,6 +96,14 @@ public class Routine_Selection extends AppCompatActivity {
     }
 
 
+    private void openCustomRoutines(){
+        FragmentManager fragment = getSupportFragmentManager();
+        FragmentTransaction transaction = fragment.beginTransaction();
+
+        transaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out);
+        transaction.replace(R.id.yoga_art_container, new Custom_Routine());
+        transaction.commit();
+    }
     @SuppressWarnings("deprecation")
     private void hideSystemUI(){
 
@@ -93,4 +120,5 @@ public class Routine_Selection extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
         );
     }
+
 }

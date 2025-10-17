@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link YogArena_Routine_3#newInstance} factory method to
+ * Use the {@link Custom_Routine#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class YogArena_Routine_3 extends Fragment {
+public class Custom_Routine extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -24,7 +24,7 @@ public class YogArena_Routine_3 extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public YogArena_Routine_3() {
+    public Custom_Routine() {
         // Required empty public constructor
     }
 
@@ -34,11 +34,11 @@ public class YogArena_Routine_3 extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment YogArena_Routine_3.
+     * @return A new instance of fragment Custom_Routine.
      */
     // TODO: Rename and change types and number of parameters
-    public static YogArena_Routine_3 newInstance(String param1, String param2) {
-        YogArena_Routine_3 fragment = new YogArena_Routine_3();
+    public static Custom_Routine newInstance(String param1, String param2) {
+        Custom_Routine fragment = new Custom_Routine();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -59,6 +59,6 @@ public class YogArena_Routine_3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_routine_art_third, container, false);
+        return inflater.inflate(R.layout.fragment_custom__routine, container, false);
     }
 }

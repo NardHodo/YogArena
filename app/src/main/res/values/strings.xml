@@ -20,6 +20,11 @@
     <string name="trivia_header">Trivia Header Text</string>
     <string name="trivia">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
 
+    <!-- Daily Check-In Text   -->
+    <string name="daily_reward_header">Daily Login</string>
+    <string name="daily_reward_claim">Claim</string>
+    <string name="reward_claimed">Rewards Received</string>
+    <string name="continue_button">Continue</string>
 
     <!-- Main Menu Texts   -->
     <string name="player_name">Player Name</string>
@@ -72,6 +77,9 @@
     <string name="select_routine">Select Routine</string>
     <string name="navbar_routine_1">From YogArena</string>
     <string name="navbar_routine_2">Custom Routines</string>
+    
+    <!--  Custom Routine Selection  -->
+    <string name="custom_routine_header">Set a name for your routine</string>
 
     <!-- Session Selection   -->
     <string name="session_one_header">Sitting Yoga</string>
