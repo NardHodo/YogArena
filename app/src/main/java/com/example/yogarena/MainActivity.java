@@ -22,7 +22,11 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.launch_screen);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        checkCameraPermissions();
+
+//        getSupportFragmentManager().beginTransaction()
+//                .replace(R.id.main_activity, new SelectPoseFragment())
+//                .commit();
+        //checkCameraPermissions();
     }
 
     public void transitionToCameraPermissions() {
@@ -41,14 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkCameraPermissions(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED){
+            //transitionToLoading();
             getSupportFragmentManager().beginTransaction()
                     .replace(R.id.main_activity, new camera()) //
                     .commit();
         } else{
             transitionToCameraPermissions();
-//                getSupportFragmentManager().beginTransaction()
-//                    .replace(android.R.id.content, new camera()) //
-//                    .commit();
         }
     }
 

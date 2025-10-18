@@ -7,48 +7,56 @@
     tools:context=".MainActivity"
     android:id="@+id/main_activity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/main"
-        android:background="@color/color_4"
-        android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        xmlns:tools="http://schemas.android.com/tools"-->
+<!--        android:id="@+id/main"-->
+<!--        android:background="@color/color_4"-->
+<!--        android:theme="@style/Theme.Material3.DayNight.NoActionBar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".MainActivity">-->
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="80dp"
-            android:layout_margin="16dp"
-            android:adjustViewBounds="true"
-            android:id="@+id/loading_logo"
-            android:src="@drawable/loading"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/loading_message_guideline"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="16dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:id="@+id/loading_logo"-->
+<!--            android:src="@drawable/loading"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/loading_message_guideline"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"/>-->
 
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/loading_message_guideline"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.90"/>
+<!--        <androidx.constraintlayout.widget.Guideline-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:id="@+id/loading_message_guideline"-->
+<!--            android:orientation="horizontal"-->
+<!--            app:layout_constraintGuide_percent="0.90"/>-->
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/launch_screen_loading"
-            android:fontFamily="@font/nunito_semibold"
-            android:textSize="16sp"
-            android:textColor="@color/color_1"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/loading_logo"
-            app:layout_constraintVertical_bias="0.9"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/launch_screen_loading"-->
+<!--            android:fontFamily="@font/nunito_semibold"-->
+<!--            android:textSize="16sp"-->
+<!--            android:textColor="@color/color_1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/loading_logo"-->
+<!--            app:layout_constraintVertical_bias="0.9"/>-->
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 </FrameLayout>

@@ -7,7 +7,8 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/in_game_Screen">
 
         <ImageView
             android:layout_width="match_parent"
@@ -72,8 +73,35 @@
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.98"/>
 
-            <ImageButton
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/margin_start_preview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.03"/> <androidx.camera.view.PreviewView
+            android:id="@+id/mini_preview_view"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            app:scaleType="fitCenter" app:layout_constraintTop_toBottomOf="@id/margin_top"
+            app:layout_constraintStart_toStartOf="@id/margin_start_preview"
+            />
+
+            <TextView
+                android:id="@+id/accuracy_text_view"
                 android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="#80000000"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="Accuracy: --%"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@id/mini_preview_view"
+                app:layout_constraintStart_toStartOf="@id/mini_preview_view"
+                app:layout_constraintTop_toBottomOf="@id/mini_preview_view" />
+            <ImageButton
+                android:id="@+id/pause_button" android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:background="@drawable/dark_buttons"
                 android:src="@drawable/pause"
@@ -83,7 +111,7 @@
                 app:layout_constraintEnd_toStartOf="@id/margin_end"
                 app:layout_constraintTop_toBottomOf="@id/margin_top"
                 app:layout_constraintBottom_toTopOf="@id/pause_bottom"/>
-            
+
             <com.google.android.material.progressindicator.LinearProgressIndicator
                 android:id="@+id/session_progress_bar"
                 android:layout_width="0dp"
@@ -102,15 +130,12 @@
                 app:layout_constraintBottom_toTopOf="@id/session_progress_bar"
                 android:layout_marginBottom="10sp">
 
-        <!--  Placeholder image, remove if necessary              -->
                 <ImageView
                     android:id="@+id/sample_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:src="@drawable/yoga_pose_1"/>
             </FrameLayout>
-
-
 
 
 

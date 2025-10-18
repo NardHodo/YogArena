@@ -77,7 +77,7 @@
     <string name="select_routine">Select Routine</string>
     <string name="navbar_routine_1">From YogArena</string>
     <string name="navbar_routine_2">Custom Routines</string>
-    
+
     <!--  Custom Routine Selection  -->
     <string name="custom_routine_header">Set a name for your routine</string>
 

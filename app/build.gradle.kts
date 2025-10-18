@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.common)
     implementation(libs.camera.view)
+    implementation(libs.navigation.fragment)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -81,4 +82,6 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-task-vision:0.4.4") {
         exclude(group = "com.google.ai.edge.litert", module = "litert-api")
     }
+
+    implementation("com.google.code.gson:gson:2.10.1")
 }

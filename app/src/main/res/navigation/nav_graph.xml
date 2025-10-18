@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/selectPoseFragment">
+
+    <fragment
+        android:id="@+id/selectPoseFragment"
+        android:name="com.example.yogarena.SelectPoseFragment"
+        android:label="Select Poses"
+        tools:layout="@layout/fragment_temp_select_pose" >
+        <action
+            android:id="@+id/action_selectPoseFragment_to_reorderFragment"
+            app:destination="@id/reorderFragment" />
+    </fragment>
+<!--  s-->
+    <fragment
+        android:id="@+id/reorderFragment"
+        android:name="com.example.yogarena.ReorderFragment"
+        android:label="Reorder Routine"
+        tools:layout="@layout/fragment_reorder" >
+        <argument
+            android:name="selectedPoseIds"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_reorderFragment_to_cameraFragment" app:destination="@id/cameraFragment" app:popUpTo="@id/selectPoseFragment"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment" android:name="com.example.yogarena.camera"
+        android:label="Camera Setup"
+        tools:layout="@layout/fragment_camera" >
+        <argument
+            android:name="selectedPoseIds"
+            app:argType="string[]" />
+        <action
+            android:id="@+id/action_camera_to_inGameScreen"
+            app:destination="@id/inGameScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inGameScreenFragment" android:name="com.example.yogarena.InGameScreen"
+        android:label="In Game"
+        tools:layout="@layout/ingame_screen_main">
+        <argument
+            android:name="selectedPoseIds"
+            app:argType="string[]" />
+    </fragment>
+
+</navigation>
