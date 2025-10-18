@@ -140,7 +140,7 @@ public class camera extends Fragment {
                 imageAnalysis.setAnalyzer(cameraExecutor, this::analyzeImage);
 
                 CameraSelector cameraSelector = new CameraSelector.Builder()
-                        .requireLensFacing(CameraSelector.LENS_FACING_BACK)
+                        .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
                         .build();
 
                 cameraProvider.unbindAll();

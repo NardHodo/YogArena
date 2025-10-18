@@ -11,15 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
     private List<CategoryGroup> categoryList;
     private OnPoseSelectedListener listener;
-    private HashSet<String> selectedPoseIds;
+    private Set<String> selectedPoseIds;
     private Context context;
 
-    public CategoryAdapter(Context context, List<CategoryGroup> categoryList, HashSet<String> selectedPoseIds, OnPoseSelectedListener listener) {
+    public CategoryAdapter(Context context, List<CategoryGroup> categoryList, Set<String> selectedPoseIds, OnPoseSelectedListener listener) {
         this.context = context;
         this.categoryList = categoryList;
         this.selectedPoseIds = selectedPoseIds;

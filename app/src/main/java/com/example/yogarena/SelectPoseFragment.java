@@ -17,8 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public class SelectPoseFragment extends Fragment implements OnPoseSelectedListener {
 
@@ -26,7 +28,7 @@ public class SelectPoseFragment extends Fragment implements OnPoseSelectedListen
     private CategoryAdapter categoryAdapter;
     private List<CategoryGroup> categoryGroups;
 
-    private HashSet<String> selectedPoseIds = new HashSet<>();
+    private Set<String> selectedPoseIds = new LinkedHashSet<>();
     private TextView selectedCounterText;
     private Button nextButton, cancelButton;
 

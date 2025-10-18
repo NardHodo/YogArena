@@ -4,6 +4,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,14 +13,15 @@ import com.example.yogarena.R;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class PoseAdapter extends RecyclerView.Adapter<PoseAdapter.PoseViewHolder> {
 
     private List<PoseInfo> poseList;
     private OnPoseSelectedListener listener;
-    private HashSet<String> selectedPoseIds; // To track selection state
+    private Set<String> selectedPoseIds; // To track selection state
 
-    public PoseAdapter(List<PoseInfo> poseList, HashSet<String> selectedPoseIds, OnPoseSelectedListener listener) {
+    public PoseAdapter(List<PoseInfo> poseList, Set<String> selectedPoseIds, OnPoseSelectedListener listener) {
         this.poseList = poseList;
         this.selectedPoseIds = selectedPoseIds;
         this.listener = listener;
@@ -45,15 +48,20 @@ public class PoseAdapter extends RecyclerView.Adapter<PoseAdapter.PoseViewHolder
     class PoseViewHolder extends RecyclerView.ViewHolder {
         ImageView poseImage;
         View selectionOverlay;
+        TextView pose_name_text;
+
 
         PoseViewHolder(@NonNull View itemView) {
             super(itemView);
             poseImage = itemView.findViewById(R.id.pose_image);
             selectionOverlay = itemView.findViewById(R.id.selection_overlay);
+            pose_name_text = itemView.findViewById(R.id.pose_name_text);
         }
 
         void bind(final PoseInfo poseInfo) {
             poseImage.setImageResource(poseInfo.getImageResourceId());
+            pose_name_text.setText(poseInfo.getSimpleName());
+
 
             // Set the selection state
             boolean isSelected = selectedPoseIds.contains(poseInfo.getPoseId());

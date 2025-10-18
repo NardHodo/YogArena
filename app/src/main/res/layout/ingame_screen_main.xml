@@ -88,18 +88,19 @@
 
             <TextView
                 android:id="@+id/accuracy_text_view"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:background="#80000000"
                 android:gravity="center"
-                android:padding="4dp"
+                android:padding="8dp"
                 android:text="Accuracy: --%"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@id/mini_preview_view"
-                app:layout_constraintStart_toStartOf="@id/mini_preview_view"
-                app:layout_constraintTop_toBottomOf="@id/mini_preview_view" />
+                android:textSize="50sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/margin_top"
+                android:layout_marginBottom="4dp"/>
             <ImageButton
                 android:id="@+id/pause_button" android:layout_width="0dp"
                 android:layout_height="0dp"
