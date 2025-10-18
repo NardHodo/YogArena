@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.firebase.common)
     implementation(libs.camera.view)
     implementation(libs.navigation.fragment)
+    implementation(libs.camera.core)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

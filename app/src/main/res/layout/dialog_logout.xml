@@ -7,29 +7,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@android:color/transparent"
-        android:theme="@style/full_screen_dialog">
-
-        <androidx.constraintlayout.widget.Guideline
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.5"/>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/dialog_bottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.55"/>
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/button_top"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.58"/>
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/dialog_top"
@@ -39,20 +17,13 @@
             app:layout_constraintGuide_percent="0.3"/>
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/button_start"
+            android:id="@+id/dialog_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.35"/>
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7"/>
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/button_end"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_percent="0.65"/>
-
-        <RelativeLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@color/color_2"
@@ -61,56 +32,118 @@
             app:layout_constraintTop_toBottomOf="@id/dialog_top"
             app:layout_constraintBottom_toTopOf="@id/dialog_bottom">
 
-            <TextView
-                android:id="@+id/logout_header"
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/header_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.1"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/header_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/desc_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.45"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/desc_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.55"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/vertical_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/buttons_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.67"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
                 android:text="@string/logout_header"
                 android:textColor="@color/color_4"
+                android:textAlignment="center"
                 android:fontFamily="@font/merriweather_bold"
-                android:layout_centerHorizontal="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="10sp"/>
+                android:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/header_top"
+                app:layout_constraintBottom_toTopOf="@id/header_bottom"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:autoSizeTextType="uniform"
                 android:text="@string/logout_desc"
+                android:textAlignment="center"
                 android:fontFamily="@font/nunito_bold"
                 android:textColor="@color/color_4"
-                android:layout_centerInParent="true"
-                android:layout_centerVertical="true"/>
-        </RelativeLayout>
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desc_top"
+                app:layout_constraintBottom_toTopOf="@id/desc_bottom"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_cancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/logout_cancel"
-            android:textColor="@color/color_1"
-            android:fontFamily="@font/merriweather_bold"
-            app:cornerRadius="20dp"
-            app:backgroundTint="@color/color_4"
-            app:layout_constraintStart_toEndOf="@id/button_start"
-            app:layout_constraintTop_toBottomOf="@id/button_top"
-            app:layout_constraintHorizontal_bias="0.0"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_1"
+                android:fontFamily="@font/merriweather_bold"
+                android:text="@string/logout_cancel"
+                app:backgroundTint="@color/color_4"
+                app:cornerRadius="20dp"
+                app:layout_constraintStart_toEndOf="@id/buttons_start"
+                app:layout_constraintEnd_toStartOf="@id/vertical_center"
+                app:layout_constraintTop_toBottomOf="@id/buttons_top"/>
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button_confirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/logout_confirm"
-            android:textColor="@color/color_1"
-            android:fontFamily="@font/merriweather_bold"
-            app:cornerRadius="20dp"
-            app:backgroundTint="@color/color_4"
-            app:layout_constraintHorizontal_bias="1"
-            app:layout_constraintTop_toBottomOf="@id/button_top"
-            app:layout_constraintEnd_toStartOf="@id/button_end"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button_confirm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/logout_confirm"
+                android:textColor="@color/color_4"
+                android:fontFamily="@font/merriweather_bold"
+                app:cornerRadius="20dp"
+                app:backgroundTint="@color/color_1"
+                app:layout_constraintStart_toEndOf="@id/vertical_center"
+                app:layout_constraintEnd_toStartOf="@id/buttons_end"
+                app:layout_constraintTop_toBottomOf="@id/buttons_top"/>
 
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 
 

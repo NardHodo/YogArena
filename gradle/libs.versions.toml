@@ -15,6 +15,7 @@ firebaseFirestore = "26.0.2"
 firebaseCommon = "22.0.1"
 cameraView = "1.5.1"
 navigationFragment = "2.9.5"
+cameraCore = "1.5.1"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
@@ -32,6 +33,7 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 firebase-common = { group = "com.google.firebase", name = "firebase-common", version.ref = "firebaseCommon" }
 camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraView" }
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigationFragment" }
+camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraCore" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

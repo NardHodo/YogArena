@@ -79,7 +79,8 @@
     <string name="navbar_routine_2">Custom Routines</string>
 
     <!--  Custom Routine Selection  -->
-    <string name="custom_routine_header">Set a name for your routine</string>
+    <string name="custom_routine_header">New Custom Routine Creation</string>
+    <string name="custom_routine_desc">Firstly, Set a name for your custom routine</string>
 
     <!-- Session Selection   -->
     <string name="session_one_header">Sitting Yoga</string>
@@ -123,8 +124,8 @@
 
     <string name="logout">Log-out Account</string>
     <!-- Logout Warning   -->
-    <string name="logout_header">Are You Sure?</string>
-    <string name="logout_desc">You will be redirected back to the Login Screen?</string>
+    <string name="logout_header">Logout YogArena Account?</string>
+    <string name="logout_desc">You will be redirected back to the Login Screen to login again or register?</string>
     <string name="logout_confirm">Confirm</string>
     <string name="logout_cancel">Cancel</string>
 

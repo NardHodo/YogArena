@@ -14,14 +14,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.25"/>
+            app:layout_constraintGuide_percent="0.2"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/dialog_bottom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.75"/>
+            app:layout_constraintGuide_percent="0.8"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -37,94 +37,123 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.03"/>
+                app:layout_constraintGuide_percent="0.1"/>
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/header_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.13"/>
+                app:layout_constraintGuide_percent="0.22"/>
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/text_input_top"
+                android:id="@+id/desc_top"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintGuide_percent="0.5"/>
+                app:layout_constraintGuide_percent="0.4"/>
 
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/buttons_top"
-                app:layout_constraintGuide_percent="0.7"
+                android:id="@+id/desc_bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.46"/>
+
             <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/buttons_start"
+                android:id="@+id/divider"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.35"/>
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.65"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/button_end"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.65"/>
-            
+                app:layout_constraintGuide_percent="0.67"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/button_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.5"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/button_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.33"/>
+
             <TextView
-                android:gravity="center"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:textColor="@color/color_3"
-                android:fontFamily="@font/merriweather_bold"
-                android:autoSizeTextType="uniform"
                 android:text="@string/custom_routine_header"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/merriweather_bold"
+                android:textColor="@color/color_3"
+                android:textAlignment="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/header_top"
                 app:layout_constraintBottom_toTopOf="@id/header_bottom"/>
 
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="@string/custom_routine_desc"
+                android:textAlignment="center"
+                android:textColor="@color/color_4"
+                android:fontFamily="@font/nunito_bold"
+                android:autoSizeTextType="uniform"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/desc_top"
+                app:layout_constraintBottom_toTopOf="@id/desc_bottom"/>
+
             <EditText
-                android:id="@+id/InputCustomRoutineName"
+                android:id="@+id/routineNameInput"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20sp"
+                android:layout_marginStart="12dp"
                 android:backgroundTint="@color/white"
-                app:layout_constraintBottom_toTopOf="@id/text_input_top"
+                android:layout_marginHorizontal="50sp"
+                android:ems="10"
+                android:inputType="text"
+                android:text=""
+                android:layout_marginEnd="12dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/divider"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/cancel"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/color_4"
                 android:text="@string/logout_cancel"
-                android:textColor="@color/color_1"
                 android:fontFamily="@font/merriweather_bold"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintTop_toBottomOf="@id/text_input_top"
-                app:layout_constraintStart_toStartOf="@id/buttons_start"/>
+                android:textColor="@color/color_1"
+                app:backgroundTint="@color/color_4"
+                app:layout_constraintStart_toEndOf="@id/button_start"
+                app:layout_constraintEnd_toStartOf="@id/button_middle"
+                app:layout_constraintTop_toBottomOf="@id/divider"/>
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/confirmName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:backgroundTint="@color/color_4"
-                android:text="@string/next"
-                android:textColor="@color/color_1"
+                android:text="@string/logout_confirm"
                 android:fontFamily="@font/merriweather_bold"
-                app:layout_constraintHorizontal_bias="1"
+                android:textColor="@color/color_4"
+                app:backgroundTint="@color/color_1"
+                app:layout_constraintStart_toEndOf="@id/button_middle"
                 app:layout_constraintEnd_toStartOf="@id/button_end"
-                app:layout_constraintStart_toEndOf="@id/cancel"
-                app:layout_constraintTop_toBottomOf="@id/text_input_top"/>
-
-
+                app:layout_constraintTop_toBottomOf="@id/divider"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>
