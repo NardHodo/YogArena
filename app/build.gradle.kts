@@ -52,6 +52,7 @@ dependencies {
     implementation(libs.camera.view)
     implementation(libs.navigation.fragment)
     implementation(libs.camera.core)
+    implementation(libs.navigation.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

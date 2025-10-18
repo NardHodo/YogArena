@@ -137,4 +137,17 @@
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
 
+    <!-- Analytics Screen   -->
+    <string name="analytics_header">Session Results</string>
+    <string name="breakdown_header">Form Accuracy Breakdown</string>
+    <string name="analytics_perfect">Perfect Form:</string>
+    <string name="analytics_great">Great Form:</string>
+    <string name="analytics_good">Good Form:</string>
+    <string name="analytics_bad">Bad:</string>
+    <string name="analytics_skip">Skipped:</string>
+
+    <string name="review_poses">Review Poses</string>
+    <string name="hold_time">Avg. Hold Time:</string>
+    <string name="total_score">Total Score:</string>
+
 </resources>

@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="24dp"
     android:layout_margin="16dp"
-    android:background="@drawable/ic_launcher_background"> <TextView
+    android:background="@drawable/dialog_boxes"> <TextView
     android:id="@+id/dialog_title"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="center_horizontal"
-    android:text="Routine created"
+    android:text="Routine Created"
     android:textColor="@android:color/white"
     android:textSize="20sp"
-    android:textStyle="bold" />
+    android:fontFamily="@font/merriweather_bold"/>
 
     <TextView
         android:id="@+id/dialog_message"
@@ -24,14 +24,18 @@
         android:layout_marginTop="8dp"
         android:text="Routine: 'My Weekday Session' successfully created"
         android:textColor="@android:color/white"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:fontFamily="@font/nunito_bold"/>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/close_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="24dp"
-        android:text="Close" />
+        android:text="Close"
+        app:backgroundTint="@color/color_4"
+        android:fontFamily="@font/merriweather_bold"
+        android:textColor="@color/color_1"/>
 
 </LinearLayout>
